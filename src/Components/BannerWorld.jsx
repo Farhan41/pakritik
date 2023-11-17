@@ -1,0 +1,25 @@
+import React from 'react'
+import vg from '../assets/background.jpg'
+import Typewriter from 'typewriter-effect';
+
+const BannerWorld = () => {
+  return (
+    <div className='banner'>
+        <div className="overlay"></div>
+        <img className='bannerimg' src={vg} alt="" />
+        <div className="content text-[14px] lg:text-[30px]">
+           
+        <Typewriter
+        options={{
+        strings: ['ASSALAMU ALAIKUM WARRAHMATULLAH', 'WELLCOME TO PAKRITIK FOODS'],
+        autoStart: true,
+        loop: true,
+        }}
+        />
+            
+        </div>
+    </div>
+  )
+}
+
+export default BannerWorld
