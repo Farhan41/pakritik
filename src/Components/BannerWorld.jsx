@@ -7,7 +7,7 @@ const BannerWorld = () => {
     <div className='banner'>
         <div className="overlay"></div>
         <img className='bannerimg' src={vg} alt="" />
-        <div className="content text-[14px] lg:text-[30px]">
+        <div className="content text-[25px] lg:text-[35px]">
            
         <Typewriter
         options={{
