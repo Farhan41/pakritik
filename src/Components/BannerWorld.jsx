@@ -11,7 +11,7 @@ const BannerWorld = () => {
            
         <Typewriter
         options={{
-        strings: ['ASSALAMU ALAIKUM WARRAHMATULLAH', 'WELLCOME TO PAKRITIK FOODS'],
+        strings: ['ASSALAMU ALAIKUM', 'WELLCOME TO PAKRITIK FOODS'],
         autoStart: true,
         loop: true,
         }}
