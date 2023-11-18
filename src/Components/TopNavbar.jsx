@@ -1,10 +1,60 @@
 import React, { useState } from 'react'
-import Container from './Container'
+
 import leaf from '../assets/leaf.png'
 import { FaBarsStaggered } from "react-icons/fa6";
+import  { useEffect } from 'react';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
 const TopNavbar = () => {
+
+  // useEffect is used to perform side effects in functional components.
+  // Here, it's used to register scroll events and update scrollSpy when the component mounts.
+  useEffect(() => {
+    
+    // Registering the 'begin' event and logging it to the console when triggered.
+    Events.scrollEvent.register('begin', (to, element) => {
+      console.log('begin', to, element);
+    });
+
+    // Registering the 'end' event and logging it to the console when triggered.
+    Events.scrollEvent.register('end', (to, element) => {
+      console.log('end', to, element);
+    });
+
+    // Updating scrollSpy when the component mounts.
+    scrollSpy.update();
+
+    // Returning a cleanup function to remove the registered events when the component unmounts.
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
+  // Defining functions to perform different types of scrolling.
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+  const scrollToBottom = () => {
+    scroll.scrollToBottom();
+  };
+
+  const scrollTo = () => {
+    scroll.scrollTo(100); // Scrolling to 100px from the top of the page.
+  };
+
+  const scrollMore = () => {
+    scroll.scrollMore(100); // Scrolling an additional 100px from the current scroll position.
+  };
+
+  // Function to handle the activation of a link.
+  const handleSetActive = (to) => {
+    console.log(to);
+  };
+
+
 
  let [bar, setBar] = useState(false)
 
@@ -17,7 +67,7 @@ const TopNavbar = () => {
  }
 
   return (
-    <Container>
+   
         <nav className='fixed w-full top-0 z-20 bg-slate-50 px-4'>
         <div className='flex justify-between'>
         <div className='font-dm font-bold flex items-center'>
@@ -28,22 +78,34 @@ const TopNavbar = () => {
         <div>
         <FaBarsStaggered onClick={handleBar} className='mt-4 mr-3 text-lg lg:hidden' />
             <ul className='font-dm font-normal  text-base hidden lg:flex items-center pt-3 gap-x-5 pr-3'>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Contact</li>
+                <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                  <li className='cursor-pointer'>Home</li>
+              </Link>
+              <Link activeClass="active" to="service" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                  <li className='cursor-pointer'>Products</li>
+              </Link>
+              <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                  <li className='cursor-pointer'>Contact</li>
+              </Link>
             </ul>
         </div>
         </div>
         {
             bar &&
             <ul className='font-dm font-normal text-emerald-500 text-base flex flex-col text-center lg:hidden pt-2  gap-y-5'>
-            <li className='border-b-1'>Home</li>
-            <li className='border-b-1'>Products</li>
-            <li className=' mb-1'>Contact</li>
+               <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+               <li className=' cursor-pointer border-b-1'>Home</li>
+              </Link>
+              <Link activeClass="active" to="service" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+              <li className=' cursor-pointer border-b-1'>Products</li>
+              </Link>
+              <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+              <li className='cursor-pointer mb-3'>Contact</li>
+              </Link>
         </ul>
         }
         </nav>
-    </Container>
+
   )
 }
 
