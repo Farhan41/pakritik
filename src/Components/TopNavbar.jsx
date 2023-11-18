@@ -18,7 +18,8 @@ const TopNavbar = () => {
 
   return (
     <Container>
-        <nav className='flex justify-between'>
+        <nav className='fixed w-full top-0 z-20 bg-slate-50 px-4'>
+        <div className='flex justify-between'>
         <div className='font-dm font-bold flex items-center'>
             <img src={leaf} alt="leaf" className='w-[50px] h-[50px]'/>
             <h3>PAKRITIK <span className='text-emerald-500'>FOODS</span></h3>
@@ -32,7 +33,7 @@ const TopNavbar = () => {
                 <li>Contact</li>
             </ul>
         </div>
-        </nav>
+        </div>
         {
             bar &&
             <ul className='font-dm font-normal text-emerald-500 text-base flex flex-col text-center lg:hidden pt-2  gap-y-5'>
@@ -41,6 +42,7 @@ const TopNavbar = () => {
             <li className=' mb-1'>Contact</li>
         </ul>
         }
+        </nav>
     </Container>
   )
 }
