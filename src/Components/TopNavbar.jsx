@@ -4,6 +4,7 @@ import leaf from '../assets/leaf.png'
 import { FaBarsStaggered } from "react-icons/fa6";
 import  { useEffect } from 'react';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { AiOutlineClose } from "react-icons/ai";
 
 
 const TopNavbar = () => {
@@ -57,14 +58,18 @@ const TopNavbar = () => {
 
 
  let [bar, setBar] = useState(false)
+ let [show, setShow] = useState(true)
 
  let handleBar = () =>{
-   if(!bar){
     setBar(true)
-   }else{
-    setBar(false)
-   }
+    setShow(false)
  }
+ 
+let handleChange =()=>{
+  setShow(true)
+  setBar(false)
+}
+
 
   return (
    
@@ -76,8 +81,15 @@ const TopNavbar = () => {
         </div>
         
         <div>
-        <FaBarsStaggered onClick={handleBar} className='mt-4 mr-3 text-lg font-bold text-emerald-500 lg:hidden' />
+          {
+            show
+            ?
+            <FaBarsStaggered onClick={handleBar} className='mt-4 mr-3 text-lg font-bold text-emerald-500 lg:hidden' />
+            :
+            <AiOutlineClose onClick={handleChange} className='mt-4 mr-3 text-lg font-bold text-red-500 lg:hidden' />
+          }
        
+        
             <ul className='font-dm font-normal  text-base hidden lg:flex items-center pt-3 gap-x-5 pr-3'>
                 <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
                   <li className='cursor-pointer text-emerald-500 font-bold hover:font-bold hover:text-black'>Home</li>
