@@ -5,6 +5,7 @@ import Footer from "./Components/Footer"
 import Contact from "./Components/Contact"
 import Service from "./Components/Service"
 import TopNavbar from "./Components/TopNavbar"
+import Whatsapp from "./Components/Whatsapp"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Service/>
       <Contact/>
       <Footer/>
+      <Whatsapp/>
     </>
   )
 }

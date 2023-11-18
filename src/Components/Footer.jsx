@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from './Container'
 
+
 const Footer = () => {
   return (
     <Container>
@@ -10,5 +11,7 @@ const Footer = () => {
     </Container>
   )
 }
+
+
 
 export default Footer
