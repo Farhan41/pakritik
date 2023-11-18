@@ -15,7 +15,7 @@ const BannerWorld = () => {
         <div className="content text-[18px] lg:text-[35px]"> 
         <Typewriter
         options={{
-        strings: ['ASSALAMU ALAIKUM', 'WELLCOME TO PAKRITIK FOODS'],
+        strings: ['ASSALAMU ALAIKUM', 'WELCOME TO PAKRITIK FOODS'],
         autoStart: true,
         loop: true,
         }}
