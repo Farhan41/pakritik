@@ -12,21 +12,21 @@ const Contact = () => {
   return (
     <Container>
         <div id='contact' className='mt-10 flex justify-center items-center'>
-        <Grid container spacing={0}>
+        <Grid container spacing={2}>
     <Grid item xs={12} sm={6}>
         <div className='py-[40px] px-[50px] flex flex-col gap-y-4'>
-            <h1 className='font-dm font-bold text-center text-[30px]'>Contact Us</h1>
+            <h1 className='font-dm font-bold text-center text-emerald-500 text-[30px]'>Contact Us</h1>
             <div className='flex flex-col gap-y-5'>
             <div className='text-[18px] lg:text-[20px] font-dm flex items-center gap-x-2'>
-            <FaPhoneAlt className='w-[10%]' />
+            <FaPhoneAlt className='w-[10%] text-emerald-500' />
             <p className='w-[90%]'> +88 01674243434</p>
             </div>
             <div className='text-[18px] lg:text-[20px] font-dm flex items-center gap-x-2'>
-            <IoMdMail className='w-[10%]' />
+            <IoMdMail className='w-[10%] text-emerald-500' />
             <p className='w-[90%]'>Pakritik@gmail.com</p>
             </div>
             <div className='text-[18px] lg:text-[20px]  font-dm flex items-center gap-x-2 '>
-            <FaMap  className='w-[10%]'/>
+            <FaMap  className='w-[10%] text-emerald-500'/>
             <p className='w-[90%]' > Companigonj, Bashurhat, Noakhali-3850, Bangladesh</p>
             </div>
             </div>

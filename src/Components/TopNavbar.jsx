@@ -76,31 +76,33 @@ const TopNavbar = () => {
         </div>
         
         <div>
-        <FaBarsStaggered onClick={handleBar} className='mt-4 mr-3 text-lg lg:hidden' />
+        <FaBarsStaggered onClick={handleBar} className='mt-4 mr-3 text-lg font-bold text-emerald-500 lg:hidden' />
+       
             <ul className='font-dm font-normal  text-base hidden lg:flex items-center pt-3 gap-x-5 pr-3'>
                 <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-                  <li className='cursor-pointer'>Home</li>
+                  <li className='cursor-pointer text-emerald-500 font-bold hover:font-bold hover:text-black'>Home</li>
               </Link>
               <Link activeClass="active" to="service" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-                  <li className='cursor-pointer'>Products</li>
+                  <li className='cursor-pointer hover:font-bold'>Products</li>
               </Link>
               <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-                  <li className='cursor-pointer'>Contact</li>
+                  <li className='cursor-pointer hover:font-bold'>Contact</li>
               </Link>
             </ul>
         </div>
         </div>
         {
             bar &&
+            
             <ul className='font-dm font-normal text-emerald-500 text-base flex flex-col text-center lg:hidden pt-2  gap-y-5'>
                <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-               <li className=' cursor-pointer border-b-1'>Home</li>
+               <li className=' cursor-pointer border-b-1 hover:font-bold'>Home</li>
               </Link>
               <Link activeClass="active" to="service" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-              <li className=' cursor-pointer border-b-1'>Products</li>
+              <li className=' cursor-pointer border-b-1 hover:font-bold'>Products</li>
               </Link>
               <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-              <li className='cursor-pointer mb-3'>Contact</li>
+              <li className='cursor-pointer mb-3 hover:font-bold'>Contact</li>
               </Link>
         </ul>
         }
