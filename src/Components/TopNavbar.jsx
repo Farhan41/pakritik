@@ -73,7 +73,7 @@ let handleChange =()=>{
 
   return (
    
-        <nav className='fixed w-full top-0 z-20 bg-slate-50 px-4'>
+        <nav className='fixed w-full top-0 z-20 backdrop-blur-md px-4'>
         <div className='flex justify-between'>
         <div className='font-dm font-bold flex items-center'>
             <img src={leaf} alt="leaf" className='w-[50px] h-[50px]'/>
@@ -108,13 +108,13 @@ let handleChange =()=>{
             
             <ul className='font-dm font-normal text-emerald-500 text-base flex flex-col text-center lg:hidden pt-2  gap-y-5'>
                <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-               <li className=' cursor-pointer border-b-1 hover:font-bold'>Home</li>
+               <li className=' cursor-pointer border-b-2 border-red-400 pb-2 hover:font-bold'>Home</li>
               </Link>
               <Link activeClass="active" to="service" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-              <li className=' cursor-pointer border-b-1 hover:font-bold'>Products</li>
+              <li className=' cursor-pointer border-b-2 border-red-400 pb-2  hover:font-bold'>Products</li>
               </Link>
               <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
-              <li className='cursor-pointer mb-3 hover:font-bold'>Contact</li>
+              <li className='cursor-pointer pb-2  mb-3 hover:font-bold'>Contact</li>
               </Link>
         </ul>
         }
