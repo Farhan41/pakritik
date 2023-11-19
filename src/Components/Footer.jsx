@@ -39,15 +39,17 @@ let handleFire =()=>{
   return (
 
     <Container>
-        <div className='py-5 border-t-2 flex items-center' id="footer">
-            <p className='text-center w-[95%]'>Copy right © 2023 By <a href="https://www.facebook.com/ferdousfarhan24">Farhan Ferdous</a> ❤️</p>
-            <div className='w-[5%]'>
+        <div className='py-5 border-t-2 relative' id="footer">
+            <div className='text-center'>
+            <p className='text-[14px]' >Copy right © 2023 By <a href="https://www.facebook.com/ferdousfarhan24">Farhan Ferdous</a> ❤️</p>
+            </div>
+            <div className='absolute bottom-3 right-2'>
               {
                 change
                 ?
-                <button onClick={handleFire} className='bg-white text-black p-3 border-2 border-black rounded-md'><IoSunny /></button>
+                <button onClick={handleFire} className='bg-white text-black p-2 border-2 border-black rounded-md'><IoSunny /></button>
                 :
-                <button onClick={handleFire} className='bg-black text-white p-3 rounded-md'><FaMoon /></button>
+                <button onClick={handleFire} className='bg-black text-white p-2 rounded-md'><FaMoon /></button>
               }
             </div>
         </div>
