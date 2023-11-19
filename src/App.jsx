@@ -9,14 +9,14 @@ import Whatsapp from "./Components/Whatsapp"
 function App() {
 
   return (
-    <>
+    <div className="dark:bg-gray-700 dark:text-gray-400">
       <TopNavbar/>
       <BannerWorld/>
       <Service/>
       <Contact/>
       <Footer/>
       <Whatsapp/>
-    </>
+    </div>
   )
 }
 
