@@ -13,7 +13,7 @@ const Service = () => {
     <Container>
 
     
- <div className='dark:bg-gray-700 dark:text-gray-400' id='service'>
+ <div className='dark:bg-gray-700 dark:text-white' id='service'>
  <Heading/>
 
 <Box sx={{ flexGrow: 1 }}>

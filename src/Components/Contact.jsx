@@ -11,7 +11,8 @@ import { FaMap } from "react-icons/fa";
 const Contact = () => {
   return (
     <Container>
-        <div id='contact' className='mt-10 mb-10 flex justify-center items-center dark:bg-gray-700 dark:text-gray-400'>
+        <div  data-aos="fade-up"
+     data-aos-duration="3000" id='contact' className='mt-10 mb-10 flex justify-center items-center dark:bg-gray-700 dark:text-gray-400'>
         <Grid container spacing={2}>
     <Grid item xs={12} sm={6}>
         <div className='py-[40px] px-[50px] flex flex-col gap-y-4'>

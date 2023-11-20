@@ -12,8 +12,9 @@ const BannerWorld = () => {
       <div className='banner' id="home">
         <div className="overlay"></div>
         <img className='bannerimg' src={vg} alt="" />
-        <div className="content text-[18px] lg:text-[35px]"> 
+        <div  className="content text-[18px] lg:text-[35px]"> 
         <Typewriter
+        
         options={{
         strings: ['ASSALAMU ALAIKUM', 'WELCOME TO PAKRITIK FOODS'],
         autoStart: true,
