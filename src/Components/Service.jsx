@@ -13,7 +13,9 @@ const Service = () => {
     <Container>
 
     
- <div className='dark:bg-gray-700 dark:text-white' id='service'>
+ <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className='dark:bg-gray-700 dark:text-white' id='service'>
  <Heading/>
 
 <Box sx={{ flexGrow: 1 }}>

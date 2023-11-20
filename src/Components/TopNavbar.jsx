@@ -73,7 +73,9 @@ let handleChange =()=>{
 
   return (
    
-        <nav className='fixed w-full top-0 z-20 backdrop-blur-md px-4'>
+        <nav data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000" className='fixed w-full top-0 z-20 backdrop-blur-md px-4'>
         <div className='flex justify-between'>
         <div className='font-dm font-bold flex items-center'>
             <img src={leaf} alt="leaf" className='w-[50px] h-[50px]'/>
